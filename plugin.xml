@@ -42,8 +42,8 @@ SOFTWARE.
         <clobbers target="Branch" />
     </js-module>
 
-    <preference name="BRANCH_KEY" />
-    <preference name="URI_SCHEME" />
+    <preference name="BRANCH_KEY" value="key_live_ijk99ZCajkBr2HFBXEEcAneotEnZwe5w" />
+    <preference name="URI_SCHEME" value="kiklu" />
 
     <!-- Hooks -->
     <hook src="hooks/afterPrepareHook.js" type="after_prepare" />
