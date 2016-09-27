@@ -1,30 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--The MIT License (MIT)
-
-Copyright (c) 2015 Branch Metrics, Inc.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
--->
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="io.branch.sdk"
-        version="2.1.16">
+        version="2.2.2">
 
     <name>branch-cordova-sdk</name>
     <description>Branch SDK Plugin</description>
@@ -32,7 +10,7 @@ SOFTWARE.
     <keywords>cordova,branch</keywords>
     <repo>https://github.com/BranchMetrics/Cordova-Ionic-PhoneGap-Deferred-Deep-Linking-SDK.git</repo>
     <issue>https://github.com/BranchMetrics/Cordova-Ionic-PhoneGap-Deferred-Deep-Linking-SDK/issues</issue>
-    
+
     <dependency
       id="es6-promise-plugin"
       url="https://github.com/vstirbu/PromisesPlugin.git">
@@ -42,8 +20,8 @@ SOFTWARE.
         <clobbers target="Branch" />
     </js-module>
 
-    <preference name="BRANCH_KEY" value="key_live_ijk99ZCajkBr2HFBXEEcAneotEnZwe5w" />
-    <preference name="URI_SCHEME" value="kiklu" />
+    <preference name="BRANCH_KEY" />
+    <preference name="URI_SCHEME" />
 
     <!-- Hooks -->
     <hook src="hooks/afterPrepareHook.js" type="after_prepare" />
@@ -74,7 +52,8 @@ SOFTWARE.
             </intent-filter>
         </config-file>
         <source-file src="src/android/io/branch/BranchSDK.java" target-dir="src/io/branch" />
-        <framework src="io.branch.sdk.android:library:1+" />
+         <!-- <framework src="io.branch.sdk.android:library:2+" /> -->
+        <framework src="build-branch-extras.gradle" custom="true" type="gradleReference" />
     </platform>
 
     <!-- ios -->
