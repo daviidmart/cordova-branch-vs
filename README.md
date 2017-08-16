@@ -1,5 +1,7 @@
 # Branch Metrics Cordova/Ionic/Phonegap SDK Reference
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/daviidmart/cordova-branch-vs.svg)](https://greenkeeper.io/)
+
 This is the repository of the [Branch Metrics](https://branch.io/) open source Cordova | Phonegap | Ionic SDK.
 
 ## Get the Demo App
